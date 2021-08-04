@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>CollectionBenchmark.MyBenchmark-20210804-201205</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.0, OS=Windows 10.0.19042.1110 (20H2/October2020Update)
+Intel Core i3-8100 CPU 3.60GHz (Coffee Lake), 1 CPU, 4 logical and 4 physical cores
+.NET SDK=6.0.100-preview.6.21355.2
+  [Host]     : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+  DefaultJob : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                   Method</th><th> Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Rank</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>For_List_NoElementAt</td><td>27.83 ns</td><td>0.576 ns</td><td>0.963 ns</td><td>27.62 ns</td><td>1</td><td>0.1453</td><td>-</td><td>-</td><td>456 B</td>
+</tr><tr><td>For_List_ElementAt</td><td>28.25 ns</td><td>0.565 ns</td><td>1.447 ns</td><td>27.66 ns</td><td>1</td><td>0.1453</td><td>-</td><td>-</td><td>456 B</td>
+</tr><tr><td>For_Array_NoElementAt</td><td>130.73 ns</td><td>0.334 ns</td><td>0.312 ns</td><td>130.71 ns</td><td>5</td><td>0.1349</td><td>-</td><td>-</td><td>424 B</td>
+</tr><tr><td>For_Array_ElementAt</td><td>1,802.88 ns</td><td>10.655 ns</td><td>9.966 ns</td><td>1,801.74 ns</td><td>7</td><td>0.1335</td><td>-</td><td>-</td><td>424 B</td>
+</tr><tr><td>Foreach_Array</td><td>129.78 ns</td><td>0.541 ns</td><td>0.480 ns</td><td>130.00 ns</td><td>5</td><td>0.1349</td><td>-</td><td>-</td><td>424 B</td>
+</tr><tr><td>Foreach_List</td><td>31.41 ns</td><td>0.651 ns</td><td>0.847 ns</td><td>31.44 ns</td><td>2</td><td>0.1453</td><td>-</td><td>-</td><td>456 B</td>
+</tr><tr><td>For_ArrayAsEnumerable_ElementAt</td><td>3,100.37 ns</td><td>10.503 ns</td><td>9.311 ns</td><td>3,097.70 ns</td><td>8</td><td>0.1335</td><td>-</td><td>-</td><td>424 B</td>
+</tr><tr><td>For_ListAsEnumerable_ElementAt</td><td>32.38 ns</td><td>0.493 ns</td><td>0.461 ns</td><td>32.32 ns</td><td>3</td><td>0.1453</td><td>-</td><td>-</td><td>456 B</td>
+</tr><tr><td>ForEach_ArrayAsEnumerable</td><td>495.11 ns</td><td>1.387 ns</td><td>1.298 ns</td><td>495.16 ns</td><td>6</td><td>0.1450</td><td>-</td><td>-</td><td>456 B</td>
+</tr><tr><td>ForEach_ListAsEnumerable</td><td>40.40 ns</td><td>0.579 ns</td><td>0.542 ns</td><td>40.11 ns</td><td>4</td><td>0.1581</td><td>-</td><td>-</td><td>496 B</td>
+</tr></tbody></table>
+</body>
+</html>
