@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>TaskBenchmark.MyTaskBenchmark-20211225-194632</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19042.1415 (20H2/October2020Update)
+Intel Core i3-8100 CPU 3.60GHz (Coffee Lake), 1 CPU, 4 logical and 4 physical cores
+.NET SDK=6.0.100
+  [Host]     : .NET 5.0.12 (5.0.1221.52207), X64 RyuJIT  [AttachedDebugger]
+  DefaultJob : .NET 5.0.12 (5.0.1221.52207), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>               Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Rank</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>BenchGroup_1_Await_When_All</td><td>62.61 ms</td><td>1.154 ms</td><td>1.080 ms</td><td>1</td><td>3 KB</td>
+</tr><tr><td>BenchGroup_1_Await_Each</td><td>437.73 ms</td><td>6.203 ms</td><td>5.802 ms</td><td>2</td><td>2 KB</td>
+</tr></tbody></table>
+</body>
+</html>
